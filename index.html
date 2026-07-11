@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BAWASA Water Billing System</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>BARANGAY WATER SYSTEM ASSOCIATION (BAWASA)</h1>
+
+<h2>Meter Reading & Billing System</h2>
+
+<div class="tabs">
+
+<button
+type="button"
+class="tab-btn active"
+onclick="showTab('billingTab')">
+Current Billing
+</button>
+
+<button
+type="button"
+class="tab-btn"
+onclick="showTab('historyTab')">
+Monthly History
+</button>
+
+<button
+type="button"
+class="tab-btn"
+onclick="showTab('paymentTab')">
+Payment Management
+</button>
+
+</div>
+
+<div id="billingTab">
+
+<div class="month">
+
+<label><b>Billing Month:</b></label>
+
+<input type="month" id="month">
+
+</div>
+
+<div class="form">
+
+<label><b>Member</b></label>
+
+<select id="member">
+
+<option value="">Select Member</option>
+
+<option>1. ALANIA, ELIZA</option>
+<option>2. ALCALDE, FLORENCE MAE</option>
+<option>3. ALEGRIA, FELICITAS</option>
+<option>4. ALEGRIA, MARLYN</option>
+<option>5. ALEGRIA, ROLANDO</option>
+<option>6. ALVARICO, ELMER / WAYNO</option>
+<option>7. AMPATO, SOY</option>
+<option>8. ANDALLON, VIRGIL</option>
+<option>9. ANDALLON, VIRGINIA</option>
+<option>10. ARCILLAS, MARILES</option>
+<option>11. ATE, VICKY</option>
+<option>12. BALANGAO, BETTY</option>
+<option>13. BRAGA, EFREN</option>
+<option>14. BERJA, MARIKINA</option>
+<option>15. BERNALDE, ALLEN GRACE</option>
+<option>16. BOSMION, ROGATO</option>
+<option>17. BOUGHALEM, MELY</option>
+<option>18. BUAGAS, ANN MONIQUE</option>
+<option>19. BUAGAS, ARLYN</option>
+<option>20. BUAGAS, BOBONG</option>
+<option>21. BUAGAS, ESTRELLA</option>
+<option>22. BUAGAS, BELEN</option>
+<option>23. BUAGAS, SERGIO SR.</option>
+<option>24. BUSAIN, KRISTIAN NIKKO</option>
+<option>25. CANADA LEONILO</option>
+<option>26. CAJUTOL, GLECERIA</option>
+<option>27. CERDEÑA, BOBBY</option>
+<option>28. COMANDA, NEMESIO</option>
+<option>29. COMANDA, NEMESIO III</option>
+<option>30. COMANDA, ANA MARIE</option>
+<option>31. DEAROS, AARON</option>
+<option>32. DEAROS, BOBONG</option>
+<option>33. DELA CRUZ, ALFREDO JR.</option>
+<option>34. DE LEON ANTONIO</option>
+<option>35. DE LEON LIEZEL</option>
+<option>36. DEL SOCORRO, JUNIE</option>
+<option>37. DEMETILLO, ALBERTO</option>
+<option>38. DIESTO, BOBONG</option>
+<option>39. DIESTO, ELSA</option>
+<option>40. DIMASUAY, REY</option>
+<option>41. DISCUATAN, ROLLY</option>
+<option>42. DOL, DOUGHLAS</option>
+<option>43. FORTICH, MARK</option>
+<option>44. FRONDA, RUBEN</option>
+<option>45. FULL GOSPEL CHURCH</option>
+<option>46. GEPANAGA, MELANIE</option>
+<option>47. GEPANAGA, TITA</option>
+<option>48. GIANAN, RODANTE</option>
+<option>49. GONZALES, EMILY</option>
+<option>50. GUELOS, EMMA</option>
+<option>51. GUMAPAC, ALBERTO</option>
+<option>52. GUMAPAC, LEONARDO</option>
+<option>53. GUMAPAC, REY</option>
+<option>54. GUMAPAC, RICARDO</option>
+<option>55. GUMAPAC, RICHARD</option>
+<option>56. GUMAPAC, RUBEN</option>
+<option>57. GUTOBAT, ROSELYN</option>
+<option>58. GUZMAN, MYLENE</option>
+<option>59. HAYAO, ANA</option>
+<option>60. LEGASPI, APOLINARIO</option>
+<option>61. LEGASPI, JAN-JAN</option>
+<option>62. LEGASPI, JESYL</option>
+<option>63. LIBRANDO, ROSARIO</option>
+<option>64. LUMOGDANG, VILMA</option>
+<option>65. MALLORCA, APRIL JEE</option>
+<option>66. MARQUEZ, PATRICIO JR.</option>
+<option>67. MISTOSO, ANA MARIE</option>
+<option>68. MONARES, GARY</option>
+<option>69. NAMANGCAYAO, JEAN</option>
+<option>70. NAMANCAYAO, REX</option>
+<option>71. NUÑEZ, MARILYN</option>
+<option>72. OBENZA, FREDDIE</option>
+<option>73. OFNGOL, RENANTE</option>
+<option>74. OPLIMO, WILSON</option>
+<option>75. ORTEGA, ALICIA</option>
+<option>76. PAGMANUA, LUCIA</option>
+<option>77. PAGMANUA, ROBERTO</option>
+<option>78. PALMA, GLORIA</option>
+<option>79. PAMIRUYAN, RAMILO</option>
+<option>80. PAMPAG, ALEXIS</option>
+<option>81. PALOMO, JUN</option>
+<option>82. PEÑAS, DANNY</option>
+<option>83. PEÑAS, DANICA</option>
+<option>84. PEÑAS, DINO DEXTER</option>
+<option>85. PEÑAS, VINCENT</option>
+<option>86. PUSTA, HENIE</option>
+<option>87. REYES, CARIDAD</option>
+<option>88. RUIZ, BENJIELYN</option>
+<option>89. SANCHEZ, EMY JOY</option>
+<option>90. SEQUIÑA, RANDY</option>
+<option>91. SERVIDAD, MELODY</option>
+<option>92. SERVIDAD, VEOLITO</option>
+<option>93. VILLALUZ, DELIO</option>
+<option>94. VILLALUZ, VALENTINO</option>
+<option>95. VILLANUEVA, RIZA</option>
+<option>96. VIRGINIA, EM-EM</option>
+<option>97. WAYNO, VIRGIL</option>
+<option>98. YULORES, MARK LOVE</option>
+<option>99. PORSADO, JOVY</option>
+<option>100. COSICOL, JENNY FE</option>
+
+</select><
+<input
+type="number"
+id="previous"
+placeholder="Previous Reading">
+
+<input
+type="number"
+id="present"
+placeholder="Present Reading">
+
+<input
+type="number"
+id="remaining"
+value="0"
+placeholder="Remaining Balance">
+
+<button
+type="button"
+onclick="addRecord()">
+Add Record
+</button>
+
+</div>
+
+<input
+type="text"
+id="search"
+placeholder="Search Member..."
+onkeyup="searchMember()">
+
+<table id="billingTable">
+
+<thead>
+
+<tr>
+
+<th>No.</th>
+<th>Billing Month</th>
+<th>Name of Member</th>
+<th>Previous</th>
+<th>Present</th>
+<th>Cubic Used</th>
+<th>Excess</th>
+<th>Excess Amount</th>
+<th>Minimum Amount</th>
+<th>Total</th>
+<th>Remaining Balance</th>
+<th>Total Amount Due</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+<div class="summary">
+
+<h3>Current Billing Summary</h3>
+
+<p>
+Total Members:
+<span id="totalMembers">0</span>
+</p>
+
+<p>
+Total Amount to Collect:
+₱<span id="totalCollection">0.00</span>
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button
+type="button"
+onclick="exportCSV()">
+Export CSV
+</button>
+
+<button
+type="button"
+onclick="clearAll()">
+Clear Current Month
+</button>
+
+</div>
+
+</div>
+
+<!-- ================= MONTHLY HISTORY ================= -->
+
+<div id="historyTab" style="display:none;">
+
+<h2>Monthly Billing History</h2>
+
+<table id="historyBillingTable">
+
+<thead>
+
+<tr>
+
+<th>No.</th>
+<th>Billing Month</th>
+<th>Total Members</th>
+<th>Total Collection</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+</tbody>
+
+</table>
+
+<br>
+
+<h3>Selected Month Records</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No.</th>
+<th>Member</th>
+<th>Previous</th>
+<th>Present</th>
+<th>Cubic Used</th>
+<th>Total Due</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyDetails">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ================= PAYMENT MANAGEMENT ================= -->
+
+<div id="paymentTab" style="display:none;">
+
+<h2>Payment Management</h2>
+
+<div class="payment-box">
+
+<label><b>Billing Month</b></label>
+
+<select
+id="paymentMonth"
+onchange="loadPaymentMembers()">
+
+<option value="">
+Select Month
+</option>
+
+</select>
+
+<label><b>Member</b></label>
+
+<select id="paymentMember">
+
+<option value="">
+Select Member
+</option>
+
+</select>
+
+</div>
+
+<div class="summary payment-summary">
+
+<p>
+<strong>Total Amount to Collect:</strong>
+₱<span id="collectAmount">0.00</span>
+</p>
+
+<p>
+<strong>Total Amount Collected:</strong>
+₱<span id="paidAmount">0.00</span>
+</p>
+
+<p>
+<strong>Total Remaining Balance:</strong>
+₱<span id="remainingAmount">0.00</span>
+</p>
+
+<p>
+<strong>Paid Members:</strong>
+<span id="paidMembers">0</span>
+</p>
+
+<p>
+<strong>Unpaid Members:</strong>
+<span id="unpaidMembers">0</span>
+</p>
+
+</div>
+
+<input
+type="text"
+id="paymentSearch"
+placeholder="Search Member..."
+onkeyup="searchPayment()">
+
+<table id="paymentBillingTable">
+
+<thead>
+
+<tr>
+
+<th>No.</th>
+<th>Billing Month</th>
+<th>Name of Member</th>
+<th>Total Amount Due</th>
+<th>Amount Paid</th>
+<th>Remaining Balance</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="paymentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ================= PAYMENT MODAL ================= -->
+
+<div
+id="paymentModal"
+class="modal"
+style="display:none;">
+
+<div class="modal-content">
+
+<h2>Receive Payment</h2>
+
+<p id="paymentMemberName"></p>
+
+<input
+type="number"
+id="paymentAmount"
+placeholder="Enter Payment Amount">
+
+<br><br>
+
+<button
+type="button"
+class="edit-btn"
+onclick="confirmPayment()">
+
+Confirm Payment
+
+</button>
+
+<button
+type="button"
+class="delete-btn"
+onclick="closePayment()">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</div>
+
+</body>
+</html>
